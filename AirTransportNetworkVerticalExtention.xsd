@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:tn-a="http://inspire.ec.europa.eu/schemas/tn-a/4.0"
+    xmlns:tn-av="http://organisationBaseUri.sk/xsd/inspire/AirTransportNetworkVerticalExtention/1.0"
+    elementFormDefault="qualified"
+    targetNamespace="http://organisationBaseUri.sk/xsd/inspire/AirTransportNetworkVerticalExtention/1.0"
+    version="0.1">
+    <annotation>
+        <documentation>-- Definition -- This package defines vertical extensions for types for air
+            transport subtheme.</documentation>
+    </annotation>
+    <import namespace="http://inspire.ec.europa.eu/schemas/tn-a/4.0"
+        schemaLocation="https://inspire.ec.europa.eu/schemas/tn-a/4.0/AirTransportNetwork.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2"
+        schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <element name="AirspaceAreaVertical" substitutionGroup="tn-a:AirspaceArea"
+        type="tn-av:AirspaceAreaVerticalType">
+        <annotation>
+            <documentation>-- Definition -- A defined volume in the air, described as horizontal
+                projection with vertical limits. Extended version with vertical limits. --
+                Description -- SOURCE [AirspaceVolume - AIXM5.0]. NOTE 1 Definition of Airspace: A
+                defined three dimensional region of space relevant to air traffic [AIXM5.0]. NOTE 2
+                Airspace regions are managed by air traffic control systems to provide a safe IFR
+                (Instrument Flight Rules) navigation for air traffic services and
+                aircrafts.</documentation>
+        </annotation>
+    </element>
+    <complexType name="AirspaceAreaVerticalType">
+        <complexContent>
+            <extension base="tn-a:AirspaceAreaType">
+                <sequence>
+                    <element name="LowerVerticalLimit" type="tn-av:LowerVerticalLimitType"
+                        nillable="true">
+                        <annotation>
+                            <documentation>-- Definition -- Lower vertical limit of the airspace. --
+                                Description -- Defines lower vertical limit of the airspace feature.
+                                Possible formats are: GND - airspace begins at the ground level
+                                1000FT AGL - airspace begins at 1000 feets above ground level 300M
+                                AGL - airspace begins at 300 meters above ground level 5000FT AMSL -
+                                airspace begins at 5000 feets above mean sea level 1500M AMSL -
+                                airspace begins at 1500 meters above mean sea level FL125 - airspace
+                                begins at flight level 125 (12 500 feets above mean sea level on QNH
+                                113.25 hPa) S1500 - airspace begins at standard metric level 1500
+                                (15 000 meters above mean sea level on QNH 113.25 hPa)
+                            </documentation>
+                        </annotation>
+                    </element>
+                    <element name="UpperVerticalLimit" type="tn-av:UpperVerticalLimitType"
+                        nillable="true">
+                        <annotation>
+                            <documentation>-- Definition -- Upper vertical limit of the airspace. --
+                                Description -- Defines upper vertical limit of the airspace feature.
+                                Possible formats are: 1000FT AGL - airspace reeches 1000 feets above
+                                ground level 300M AGL - airspace reeches 300 meters above ground
+                                level 5000FT AMSL - airspace reeches 5000 feets above mean sea level
+                                1500M AMSL - airspace reeches 1500 meters above mean sea level FL125
+                                - airspace reeches flight level 125 (12 500 feets above mean sea
+                                level on QNH 113.25 hPa) S1500 - airspace reeches standard metric
+                                level 1500 (15 000 meters above mean sea level on QNH 113.25 hPa)
+                                UNL - airspace has no upper vertical limit defined (unlimited)
+                            </documentation>
+                        </annotation>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="LowerVerticalLimitType">
+        <complexContent>
+            <extension base="tn-a:LowerAltitudeLimitType">
+                <sequence>
+                    <element name="referenceAltitudeLevel" type="gml:ReferenceType"
+                        minOccurs="1" maxOccurs="1" nillable="false"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="UpperVerticalLimitType">
+        <complexContent>
+            <extension base="tn-a:UpperAltitudeLimitType">
+                <sequence>
+                    <element name="referenceAltitudeLevel" type="gml:ReferenceType"
+                        minOccurs="1" maxOccurs="1" nillable="false"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+</schema>
