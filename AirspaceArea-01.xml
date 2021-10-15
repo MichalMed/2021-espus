@@ -41,14 +41,14 @@
   <net:networkRef xsi:nil="true"/>
   <net:beginLifespanVersion>2021-10-09T21:08:12</net:beginLifespanVersion>
   <tn:validFrom>2021-10-09T21:08:12</tn:validFrom>
-  <tn-a:altitude uom="metre">256</tn-a:altitude><!-- v ideálním případě by i jednotka měla být uvedena odkazem do číselníku -->
-  <tn-av:referenceAltitudeLevel xlink:href="http://číselníkReferenčníchVýškovýchHladin.sk#referenčníHladina"/>
+  <tn-a:altitude uom="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_UomDistanceVerticalType.html#M">256</tn-a:altitude><!-- v ideálním případě by i jednotka měla být uvedena odkazem do číselníku -->
+  <tn-av:referenceAltitudeLevel xlink:href="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_CodeVerticalReferenceType.html#SFC"/>
  </tn-av:LowerVerticalLimit>
  <tn-av:UpperVerticalLimit>
   <net:networkRef xsi:nil="true"/>
   <net:beginLifespanVersion>2021-10-09T21:08:12</net:beginLifespanVersion>
   <tn:validFrom>2021-10-09T21:08:12</tn:validFrom>
-  <tn-a:altitude uom="hPa">320</tn-a:altitude>
-  <tn-av:referenceAltitudeLevel xlink:href="http://číselníkReferenčníchVýškovýchHladin.sk#jináReferenčníHladina"/>
+  <tn-a:altitude uom="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_UomDistanceVerticalType.html#OTHER">320</tn-a:altitude>
+  <tn-av:referenceAltitudeLevel xlink:href="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_CodeVerticalReferenceType.html#MSL"/>
  </tn-av:UpperVerticalLimit>
 </tn-av:AirspaceArea>

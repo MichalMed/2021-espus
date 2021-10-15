@@ -13,8 +13,8 @@
         schemaLocation="https://inspire.ec.europa.eu/schemas/tn-a/4.0/AirTransportNetwork.xsd"/>
     <import namespace="http://www.opengis.net/gml/3.2"
         schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
-    <element name="AirspaceAreaVertical" substitutionGroup="tn-a:AirspaceArea"
-        type="tn-av:AirspaceAreaVerticalType">
+    <element name="AirspaceArea" substitutionGroup="tn-a:AirspaceArea"
+        type="tn-av:AirspaceAreaType">
         <annotation>
             <documentation>-- Definition -- A defined volume in the air, described as horizontal
                 projection with vertical limits. Extended version with vertical limits. --
@@ -25,7 +25,7 @@
                 aircrafts.</documentation>
         </annotation>
     </element>
-    <complexType name="AirspaceAreaVerticalType">
+    <complexType name="AirspaceAreaType">
         <complexContent>
             <extension base="tn-a:AirspaceAreaType">
                 <sequence>
