@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tn-av:AirspaceArea xmlns:gml="http://www.opengis.net/gml/3.2"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:gco="http://www.isotc211.org/2005/gco"
+ xmlns:gmd="http://www.isotc211.org/2005/gmd"
+ xmlns:base="http://inspire.ec.europa.eu/schemas/base/3.3"
+ xmlns:gn="http://inspire.ec.europa.eu/schemas/gn/4.0"
+ xmlns:net="http://inspire.ec.europa.eu/schemas/net/4.0"
+ xmlns:tn="http://inspire.ec.europa.eu/schemas/tn/4.0"
+ xmlns:gss="http://www.isotc211.org/2005/gss"
+ xmlns:sc="http://www.interactive-instruments.de/ShapeChange/AppInfo"
+ xmlns:gsr="http://www.isotc211.org/2005/gsr"
+ xmlns:gts="http://www.isotc211.org/2005/gts"
+ xmlns:tn-a="http://inspire.ec.europa.eu/schemas/tn-a/4.0"
+ xmlns:tn-av="http://organisationBaseUri.sk/xsd/inspire/AirTransportNetworkVerticalExtention/1.0"
+ xmlns:bu-base="http://inspire.ec.europa.eu/schemas/bu-base/4.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://organisationBaseUri.sk/xsd/inspire/AirTransportNetworkVerticalExtention/1.0 ./AirTransportNetworkVerticalExtention.xsd">
+ <net:beginLifespanVersion>2021-10-09T12:08:24</net:beginLifespanVersion>
+ <net:inNetwork/>
+ <net:inNetwork/>
+ <net:geometry></net:geometry>
+ <tn:geographicalName>
+  <gn:GeographicalName>
+   <gn:language/>
+   <gn:nativeness/>
+   <gn:nameStatus/>
+   <gn:sourceOfName/>
+   <gn:pronunciation xsi:nil="true"/>
+   <gn:spelling>
+    <gn:SpellingOfName>
+     <gn:text></gn:text>
+     <gn:script/>
+    </gn:SpellingOfName>
+   </gn:spelling>
+  </gn:GeographicalName>
+ </tn:geographicalName>
+ <tn:validFrom>2021-10-09T12:08:24</tn:validFrom>
+ <tn-a:AirspaceAreaType/>
+ <tn-av:LowerVerticalLimit>
+  <net:networkRef xsi:nil="true"/>
+  <net:beginLifespanVersion>2021-10-09T21:08:12</net:beginLifespanVersion>
+  <tn:validFrom>2021-10-09T21:08:12</tn:validFrom>
+  <tn-a:altitude uom="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_UomDistanceVerticalType.html#M">256</tn-a:altitude><!-- v ideálním případě by i jednotka měla být uvedena odkazem do číselníku -->
+  <tn-av:referenceAltitudeLevel xlink:href="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_CodeVerticalReferenceType.html#SFC"/>
+ </tn-av:LowerVerticalLimit>
+ <tn-av:UpperVerticalLimit>
+  <net:networkRef xsi:nil="true"/>
+  <net:beginLifespanVersion>2021-10-09T21:08:12</net:beginLifespanVersion>
+  <tn:validFrom>2021-10-09T21:08:12</tn:validFrom>
+  <tn-a:altitude uom="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_UomDistanceVerticalType.html#OTHER">320</tn-a:altitude>
+  <tn-av:referenceAltitudeLevel xlink:href="https://aixm.aero/sites/aixm.aero/files/imce/AIXM511HTML/AIXM/DataType_CodeVerticalReferenceType.html#MSL"/>
+ </tn-av:UpperVerticalLimit>
+</tn-av:AirspaceArea>
