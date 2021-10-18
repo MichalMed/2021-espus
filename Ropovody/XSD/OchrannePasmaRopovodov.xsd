@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    targetNamespace="http://schemas.transpetrol.org/OchrannePasmaRopovodov"
+    xmlns:opr="http://schemas.transpetrol.org/OchrannePasmaRopovodov"
+    xmlns:am="http://inspire.ec.europa.eu/schemas/am/4.0" xmlns:gml="http://www.opengis.net/gml/3.2">
+    <import namespace="http://inspire.ec.europa.eu/schemas/am/4.0"
+        schemaLocation="http://inspire.ec.europa.eu/schemas/am/4.0/AreaManagementRestrictionRegulationZone.xsd"/>
+    <import namespace="http://www.opengis.net/gml/3.2"
+        schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+    <element name="OchrannePasmoRopovodu"
+        substitutionGroup="am:ManagementRestrictionOrRegulationZone"
+        type="opr:OchrannePasmoRopovoduType"/>
+    <complexType name="OchrannePasmoRopovoduType">
+        <complexContent>
+            <extension base="am:ManagementRestrictionOrRegulationZoneType">
+                <sequence>
+
+                    <element name="width">
+                        <complexType>
+                            <simpleContent>
+                                <extension base="float">
+                                    <attribute ref="gml:uom" use="required"/>
+                                </extension>
+                            </simpleContent>
+                        </complexType>
+                    </element>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="OchrannePasmoRopovoduPropertyType">
+        <sequence>
+            <element ref="opr:OchrannePasmoRopovodu"/>
+        </sequence>
+        <attributeGroup ref="gml:AssociationAttributeGroup"/>
+        <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+    </complexType>
+</schema>
